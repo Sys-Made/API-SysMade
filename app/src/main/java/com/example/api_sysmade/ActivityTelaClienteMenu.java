@@ -13,7 +13,7 @@ public class ActivityTelaClienteMenu extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente_menu);
-        buttonVoltar2 = findViewById(R.id.buttonVoltar);
+        buttonVoltar2 = findViewById(R.id.buttonVoltarSocio);
         voltarAoMenu();
     }
 

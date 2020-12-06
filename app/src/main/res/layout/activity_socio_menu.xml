@@ -8,7 +8,7 @@
     tools:context=".ActivityTelaSocioMenu">
 
     <Button
-        android:id="@+id/buttonVoltar"
+        android:id="@+id/buttonVoltarSocio"
         android:layout_width="61dp"
         android:layout_height="58dp"
         android:layout_marginStart="168dp"

@@ -4,6 +4,185 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/fundo"
     tools:context=".ActivityTelaSobre">
 
+    <ImageView
+        android:id="@+id/imageLogo"
+        android:layout_width="66dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="85dp"
+        app:layout_constraintBottom_toTopOf="@+id/textTextoEmpresa"
+        app:layout_constraintEnd_toStartOf="@+id/textTituloEmpresa"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/ic_launcher" />
+
+    <TextView
+        android:id="@+id/textTextoEmpresa"
+        android:layout_width="404dp"
+        android:layout_height="163dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="2dp"
+        android:text='    Em 2020 seis jovens sonhadores decidiram criar uma empresa de T.I com o objetivo de aplicar seus conhecimentos na área obtidos no curso da Etec. Nascia ali a SysMade, uma empresa que busca constantemente inovação tecnológica e excelência nos serviços prestados aos clientes. Desde então a SysMade desenvolve sites e sistemas desktop. Futuramente pretendemos trabalhar também com aplicações móveis, inteligência artificial e IOT (internet of things) ou internet das coisas. Quando fundamos nossa empresa, queríamos que seu nome tivesse a ver com tecnologia e eficiência e então decidimos chama-la de SysMade, onde "Sys" vem de system e "Made" vem do inglês que traduzindo tudo fica “sistema feito” que lembra agilidade no desenvolvimento de software.'
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textMissao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageLogo" />
+
+    <TextView
+        android:id="@+id/textTituloEmpresa"
+        android:layout_width="102dp"
+        android:layout_height="24dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="73dp"
+        android:layout_marginBottom="35dp"
+        android:text="EMPRESA"
+        android:textAlignment="center"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textTextoEmpresa"
+        app:layout_constraintEnd_toStartOf="@+id/buttonVoltarSobre"
+        app:layout_constraintStart_toEndOf="@+id/imageLogo"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/textMissao"
+        android:layout_width="63dp"
+        android:layout_height="19dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="345dp"
+        android:layout_marginBottom="8dp"
+        android:text="MISSÃO;"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textSize="14sp"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textTextoMissao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTextoEmpresa" />
+
+    <TextView
+        android:id="@+id/textTextoMissao"
+        android:layout_width="409dp"
+        android:layout_height="34dp"
+        android:layout_marginStart="1dp"
+        android:layout_marginEnd="1dp"
+        android:layout_marginBottom="9dp"
+        android:text="    Desenvolver sistemas cada vez mais inovadores, eficientes e seguros para atender todas as necessidades de negócio de nossos clientes."
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textVisao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textMissao" />
+
+    <TextView
+        android:id="@+id/textVisao"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="366dp"
+        android:layout_marginBottom="15dp"
+        android:text="VISÃO;"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/texttextoVisao"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTextoMissao" />
+
+    <TextView
+        android:id="@+id/texttextoVisao"
+        android:layout_width="410dp"
+        android:layout_height="46dp"
+        android:layout_marginStart="1dp"
+        android:text="    Um dia nos tornar uma empresa referência no mercado de desenvolvimento de sistemas e ser reconhecida como uma das empresas mais incríveis e inovadoras da área da tecnologia."
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textValores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textVisao" />
+
+    <TextView
+        android:id="@+id/textValores"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="2dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="344dp"
+        android:text="VALORES;"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textTextoValores"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/texttextoVisao" />
+
+    <TextView
+        android:id="@+id/textTextoValores"
+        android:layout_width="410dp"
+        android:layout_height="58dp"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="1dp"
+        android:text="    Priorizamos a segurança e satisfação de nossos clientes, trabalhando sempre de maneira transparente, ágil, eficaz, ética. Em busca de resultados, inovação, com máxima qualidade e os melhores recursos tecnológicos em nossos sistemas."
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toTopOf="@+id/textContato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textValores" />
+
+    <TextView
+        android:id="@+id/textContato"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="1dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginEnd="236dp"
+        android:text="CONTATO/REDES SOCIAIS:"
+        android:textColor="@color/design_default_color_primary_variant"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/textTextoContato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textTextoValores" />
+
+    <TextView
+        android:id="@+id/textTextoContato"
+        android:layout_width="409dp"
+        android:layout_height="87dp"
+        android:layout_marginStart="3dp"
+        android:layout_marginBottom="3dp"
+        android:text="CNPJ: 77.041.563/0001-52 Telefone de Contato:  +55 (11) 2790-9893 Site: http://www.sysmade.epizy.com/ Instagram: systemmade https://www.instagram.com/systemmade/. Facebook: @SystemMadee https://www.facebook.com/SystemMadee. LinkedIn: Sys Made https://www.linkedin.com/in/sys-made-a075301a8/ E-mail: systemadeoficial@gmail.com Nosso 1° Cliente:  Adminiscar (Pedido: locadora/aluguel de veículos)"
+        android:textColor="@android:color/holo_orange_dark"
+        android:textSize="12sp"
+        android:textStyle="bold|italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textContato" />
+
+    <Button
+        android:id="@+id/buttonVoltarSobre"
+        android:layout_width="53dp"
+        android:layout_height="49dp"
+        android:layout_marginEnd="29dp"
+        android:layout_marginBottom="13dp"
+        android:background="@drawable/icone_voltar"
+        app:layout_constraintBottom_toTopOf="@+id/textTextoEmpresa"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/textTituloEmpresa" />
 </androidx.constraintlayout.widget.ConstraintLayout>

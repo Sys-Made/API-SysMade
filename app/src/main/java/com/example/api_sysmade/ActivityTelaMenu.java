@@ -12,6 +12,7 @@ public class ActivityTelaMenu extends AppCompatActivity {
     Button buttonSocio;
     Button buttonCliente;
     Button buttonMapa;
+    Button buttonSobre;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -24,6 +25,8 @@ public class ActivityTelaMenu extends AppCompatActivity {
         abrirClienteMenu();
         buttonMapa = findViewById(R.id.buttonMapa);
         abrirMapa();
+        buttonSobre = findViewById(R.id.buttonSobre);
+        abrirSobre();
     }
 
 
@@ -69,6 +72,17 @@ public class ActivityTelaMenu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent telaMapa = new Intent(getApplicationContext(), ActivityMapa.class);
                 startActivity(telaMapa);
+            }
+        });
+    }
+
+    //Metodo que direciona o usuario para a tela Sobre
+    public void abrirSobre(){
+        buttonSobre.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telaSobre = new Intent(getApplicationContext(), ActivityTelaSobre.class);
+                startActivity(telaSobre);
             }
         });
     }
