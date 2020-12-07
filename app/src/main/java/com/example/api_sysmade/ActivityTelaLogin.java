@@ -16,7 +16,7 @@ public class ActivityTelaLogin extends AppCompatActivity {
     EditText txtSenha;
 
     //Usuario e senha de teste.
-    DtoLogin dtoLogin = new DtoLogin("Izaias","izaias","1234");
+    DtoLogin dtoLogin = new DtoLogin("login teste","login_teste","1234");
     DtoLogin dao;
 
     @Override
