@@ -13,6 +13,7 @@ public class ActivityTelaMenu extends AppCompatActivity {
     Button buttonCliente;
     Button buttonMapa;
     Button buttonSobre;
+    Button buttonServicos;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -27,6 +28,8 @@ public class ActivityTelaMenu extends AppCompatActivity {
         abrirMapa();
         buttonSobre = findViewById(R.id.buttonSobre);
         abrirSobre();
+        buttonServicos = findViewById(R.id.buttonServicos);
+        abrirServicos();
     }
 
 
@@ -83,6 +86,16 @@ public class ActivityTelaMenu extends AppCompatActivity {
             public void onClick(View v) {
                 Intent telaSobre = new Intent(getApplicationContext(), ActivityTelaSobre.class);
                 startActivity(telaSobre);
+            }
+        });
+    }
+
+    private void abrirServicos(){
+        buttonServicos.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent servico = new Intent(getApplicationContext(), ActivityTelaServicos.class);
+                startActivity(servico);
             }
         });
     }
