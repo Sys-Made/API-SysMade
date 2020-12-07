@@ -8,21 +8,49 @@ import android.view.View;
 import android.widget.Button;
 
 public class ActivityTelaClienteMenu extends AppCompatActivity {
-    Button buttonVoltar2;
+    Button buttonVoltarCliMenu;
+    Button buttonChamaCadCli;
+    Button buttonChamaConsulCli;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cliente_menu);
-        buttonVoltar2 = findViewById(R.id.buttonVoltarSocio);
+        buttonVoltarCliMenu = findViewById(R.id.buttonVoltarCliMenu);
+        buttonChamaCadCli = findViewById(R.id.buttonChamaCadCli);
+        buttonChamaConsulCli = findViewById(R.id.buttonChamaConsulCli);
         voltarAoMenu();
+        abrirCadCli();
+        abrirConsulCli();
     }
 
     public void voltarAoMenu(){
-        buttonVoltar2.setOnClickListener(new View.OnClickListener() {
+        buttonVoltarCliMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent telaMenu = new Intent(getApplicationContext(), ActivityTelaMenu.class);
                 startActivity(telaMenu);
+            }
+        });
+    }
+
+    //Metodo que direciona o usuario para a tela de cadastro de clientes
+    public void abrirCadCli(){
+        buttonChamaCadCli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telaCadCli = new Intent(getApplicationContext(), ActivityCadastraCliente.class);
+                startActivity(telaCadCli);
+            }
+        });
+    }
+
+    //Metodo que direciona o usuario para a tela de consultas de clientes
+    public void abrirConsulCli(){
+        buttonChamaConsulCli.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telaConsulCli = new Intent(getApplicationContext(), ActivityConsultaCliente.class);
+                startActivity(telaConsulCli);
             }
         });
     }

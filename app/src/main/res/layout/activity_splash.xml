@@ -5,4 +5,5 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/splash"
+    app:layout_collapseMode="none"
     tools:context=".ActivityTelaSplash" />
