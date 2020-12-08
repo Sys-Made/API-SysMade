@@ -1,4 +1,4 @@
-package com.example.api_sysmade;
+package com.example.api_sysmade.database;
 
 public class DtoLogin {
     //Atributos

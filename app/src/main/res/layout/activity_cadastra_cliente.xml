@@ -23,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonCancelCadCli" />
 
     <EditText
-        android:id="@+id/txtCpfCli"
+        android:id="@+id/editTextCpf_Cnpj"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="16dp"
@@ -35,13 +35,13 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/txtTelCli"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTelCli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtNomeCli" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNomeCli" />
 
     <EditText
-        android:id="@+id/txtNomeCli"
+        android:id="@+id/editTextNomeCli"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="20dp"
@@ -52,13 +52,13 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/txtCpfCli"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCpf_Cnpj"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageView2" />
 
     <EditText
-        android:id="@+id/txtEmailCli"
+        android:id="@+id/editTextEmailCli"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="18dp"
@@ -73,10 +73,10 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonCancelCadCli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEndCli" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEndCli" />
 
     <EditText
-        android:id="@+id/txtEndCli"
+        android:id="@+id/editTextEndCli"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="18dp"
@@ -88,13 +88,13 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/txtEmailCli"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEmailCli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtTelCli" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTelCli" />
 
     <EditText
-        android:id="@+id/txtTelCli"
+        android:id="@+id/editTextTelCli"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="18dp"
@@ -106,10 +106,10 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/txtEndCli"
+        app:layout_constraintBottom_toTopOf="@+id/editTextEndCli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtCpfCli" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCpf_Cnpj" />
 
     <Button
         android:id="@+id/buttonCancelCadCli"
@@ -125,7 +125,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonVoltarCadCli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toEndOf="@+id/buttonCadastrarCliente"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmailCli" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailCli" />
 
     <Button
         android:id="@+id/buttonCadastrarCliente"
@@ -141,7 +141,7 @@
         app:layout_constraintBottom_toTopOf="@+id/buttonVoltarCadCli"
         app:layout_constraintEnd_toStartOf="@+id/buttonCancelCadCli"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/txtEmailCli" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextEmailCli" />
 
     <ImageView
         android:id="@+id/imageView2"
@@ -150,7 +150,7 @@
         android:layout_marginStart="135dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="135dp"
-        app:layout_constraintBottom_toTopOf="@+id/txtNomeCli"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNomeCli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

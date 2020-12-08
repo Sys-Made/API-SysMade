@@ -9,6 +9,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
 
+import com.example.api_sysmade.database.DtoLogin;
+
 public class ActivityTelaLogin extends AppCompatActivity {
     Button buttonEntrar;//Declarando objeto botao
     Button buttonCancelar;
@@ -16,7 +18,7 @@ public class ActivityTelaLogin extends AppCompatActivity {
     EditText txtSenha;
 
     //Usuario e senha de teste.
-    DtoLogin dtoLogin = new DtoLogin("login teste","login_teste","1234");
+    DtoLogin dtoLogin = new DtoLogin("usuario teste","teste","1234");
     DtoLogin dao;
 
     @Override
@@ -31,8 +33,8 @@ public class ActivityTelaLogin extends AppCompatActivity {
 
 
      buttonEntrar.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View view) {
+         @Override
+         public void onClick(View view) {
             String usuario = txtUsuario.getText().toString();
             String senha =  txtSenha.getText().toString();
             logar(usuario,senha);
