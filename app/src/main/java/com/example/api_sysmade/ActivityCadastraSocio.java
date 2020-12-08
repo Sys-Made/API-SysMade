@@ -6,24 +6,92 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.util.Log;
+import android.widget.EditText;
+import android.widget.Toast;
+
+import com.example.api_sysmade.database.DaoSocio;
+import com.example.api_sysmade.database.DtoSocio;
 
 public class ActivityCadastraSocio extends AppCompatActivity {
     Button buttonVoltarCadSocio;
+    Button buttonCadastrarSocio;
+    Button buttonCancelCadSocio;
+
+    EditText editTextSenhaSocio;
+    EditText editTextNomeSocio;
+    EditText editTextCpfSocio;
+    EditText editTextCargoSocio;
+    EditText editTextEndSocio;
+    EditText editTextTelSocio;
+    EditText editTextEmailSocio;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastra_socio);
-        buttonVoltarCadSocio = findViewById(R.id.buttonVoltarCadSocio);
-        voltaMenuSocio();
-    }
 
-    private void voltaMenuSocio(){
-        buttonVoltarCadSocio.setOnClickListener(new View.OnClickListener() {
+        buttonCadastrarSocio = findViewById(R.id.buttonCadastrarSocio);
+        buttonCancelCadSocio = findViewById(R.id.buttonCancelCadSocio);
+        buttonVoltarCadSocio = findViewById(R.id.buttonVoltarCadSocio);
+
+        editTextSenhaSocio = findViewById(R.id.editTextSenhaSocio);
+        editTextNomeSocio = findViewById(R.id.editTextNomeSocio);
+        editTextCpfSocio = findViewById(R.id.editTextCpfSocio);
+        editTextCargoSocio = findViewById(R.id.editTextCargoSocio);
+        editTextEndSocio = findViewById(R.id.editTextEndSocio);
+        editTextTelSocio = findViewById(R.id.editTextTelSocio);
+        editTextEmailSocio = findViewById(R.id.editTextEmailSocio);
+        voltarAoMenuSocio();
+
+        buttonCadastrarSocio.setOnClickListener(new View.OnClickListener() {
+
             @Override
             public void onClick(View v) {
-                Intent telaMenuSocio = new Intent(getApplicationContext(), ActivityTelaSocioMenu.class);
-                startActivity(telaMenuSocio);
+                DtoSocio dtoSocio = new DtoSocio(editTextSenhaSocio.getText().toString(),
+                        editTextNomeSocio.getText().toString(),
+                        editTextCpfSocio.getText().toString(),
+                        editTextCargoSocio.getText().toString(),
+                        editTextEndSocio.getText().toString(),
+                        editTextTelSocio.getText().toString(),
+                        editTextEmailSocio.getText().toString());
+                DaoSocio daoSocio = new DaoSocio(getApplicationContext());
+                try {
+                    if (daoSocio.inserir(dtoSocio) > 0) {
+                        Toast.makeText(ActivityCadastraSocio.this, "Inserido com sucesso!", Toast.LENGTH_SHORT).show();
+                    }
+                } catch (Exception ex) {
+                    Log.d("Erro-ao-inserir: ", ex.toString());
+                    Toast.makeText(ActivityCadastraSocio.this, "Erro ao Inserir: " + ex.toString(), Toast.LENGTH_SHORT).show();
+                }
+            }
+        });
+        // botão limpar campos
+        buttonCancelCadSocio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                // Limpar os campos de texto.
+                editTextSenhaSocio .setText("");
+                editTextNomeSocio.setText("");
+                editTextCpfSocio.setText("");
+                editTextCargoSocio.setText("");
+                editTextEndSocio.setText("");
+                editTextTelSocio.setText("");
+                editTextEmailSocio.setText("");
             }
         });
     }
+
+
+    // volta pra tela menu cliente
+    public void voltarAoMenuSocio(){
+        buttonVoltarCadSocio.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent telaSocioMenu = new Intent(getApplicationContext(), ActivityTelaSocioMenu.class);
+                startActivity(telaSocioMenu);
+            }
+        });
+    }
+
 }

@@ -18,12 +18,12 @@ public class ActivityTelaSocioMenu extends AppCompatActivity {
         buttonVoltarSocioMenu = findViewById(R.id.buttonVoltarSocioMenu);
         buttonChamaCadSocio = findViewById(R.id.buttonChamaCadSocio);
         buttonChamaConsulSocio = findViewById(R.id.buttonChamaConsulSocio);
-        voltarAoMenu();
+        voltarAoMenu2();
         abrirCadSocio();
         abrirConsulSocio();
     }
 
-    public void voltarAoMenu(){
+    public void voltarAoMenu2(){
         buttonVoltarSocioMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

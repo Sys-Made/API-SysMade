@@ -24,7 +24,7 @@ public class ActivityConsultaSocio extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_consulta_cliente);
+        setContentView(R.layout.activity_consulta_socio);
         buttonVoltarConsulSocio = findViewById(R.id.buttonVoltarConsulSocio);
         buttonNovoSocio = findViewById(R.id.buttonNovoSocio);
         listViewSocio = findViewById(R.id.listViewSocio);

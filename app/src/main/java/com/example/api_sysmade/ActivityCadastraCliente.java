@@ -56,7 +56,7 @@ public class ActivityCadastraCliente extends AppCompatActivity {
                     }
                 } catch (Exception ex) {
                     Log.d("Erro-ao-inserir: ", ex.toString());
-                    Toast.makeText(ActivityCadastraCliente.this, "Erro ao Inserido: " + ex.toString(), Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityCadastraCliente.this, "Erro ao Inserir: " + ex.toString(), Toast.LENGTH_SHORT).show();
                 }
             }
         });
