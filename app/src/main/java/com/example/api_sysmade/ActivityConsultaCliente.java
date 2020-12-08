@@ -26,11 +26,11 @@ public class ActivityConsultaCliente extends AppCompatActivity {
         setContentView(R.layout.activity_consulta_cliente);
         buttonVoltarConsulCli = findViewById(R.id.buttonVoltarConsulCli);
         buttonNovoCli = findViewById(R.id.buttonNovoCli);
-        listViewCliente = findViewById(R.id.listViewCliente);
+        listViewCliente = findViewById(R.id.listViewSocio);
         DaoCliente daoCliente = new DaoCliente(getApplicationContext());
         voltarAoMenuCliente();
 
-        arrayListCliente = daoCliente.consultarTodos();
+        arrayListCliente = daoCliente.consultarTodosCli();
         ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(),android.R.layout.simple_list_item_1,arrayListCliente);
 
         listViewCliente.setAdapter(adapter);

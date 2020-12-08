@@ -61,7 +61,7 @@ public class DaoCliente extends SQLiteOpenHelper {
     }
 
 
-    public ArrayList<DtoCliente> consultarTodos(){
+    public ArrayList<DtoCliente> consultarTodosCli(){
         String comandoCli  = "SELECT * FROM " + TABELA_CLIENTE;
         Cursor cursor = getReadableDatabase().rawQuery(comandoCli,null);
         ArrayList<DtoCliente> listaClientes = new ArrayList<>();

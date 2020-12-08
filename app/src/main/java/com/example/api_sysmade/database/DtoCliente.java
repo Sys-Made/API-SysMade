@@ -8,9 +8,9 @@ public class DtoCliente {
 
     }
 
-    public DtoCliente(String nome, String cpf_cnpj, String email, String telefone, String endereco) {
+    public DtoCliente(String nome, String cpf_cnpj, String telefone, String endereco, String email) {
         this.nome = nome;
-        this.cpf_cnpj = email;
+        this.cpf_cnpj = cpf_cnpj;
         this.telefone = telefone;
         this.endereco = endereco;
         this.email = email;
@@ -62,7 +62,8 @@ public class DtoCliente {
         return  "nome='" + nome + '\'' +
                 ", cpf_cnpj='" + cpf_cnpj + '\'' +
                 ", telefone='" + telefone + '\'' +
-                ", endereco='" + endereco +
-                ", email='" + email + '\'';
+                ", endereco='" + endereco + '\'' +
+                ", email='" + email;
     }
 }
+

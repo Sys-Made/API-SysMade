@@ -15,17 +15,23 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ActivityConsultaSocio"
-            android:label="                     Consultar sócios"/>
-        <activity android:name=".ActivityConsultaCliente"
-            android:label="                     Consultar clientes"/>
+        <activity
+            android:name=".ActivityTelaSocioMenu"
+            android:label="                               Sócios"></activity>
+        <activity
+            android:name=".ActivityConsultaSocio"
+            android:label="                     Consultar sócios" />
+        <activity
+            android:name=".ActivityConsultaCliente"
+            android:label="                     Consultar clientes" />
         <activity
             android:name=".ActivityCadastraCliente"
             android:label="                 Cadastrar novo cliente?" />
         <activity
             android:name=".ActivityTelaSobre"
             android:label="                                 Sobre" />
-        <activity android:name=".ActivityCadastraSocio"
+        <activity
+            android:name=".ActivityCadastraSocio"
             android:label="                   Cadastrar novo sócio?" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
@@ -45,9 +51,6 @@
         <activity
             android:name=".ActivityTelaClienteMenu"
             android:label="                       Menu de Clientes" />
-        <activity
-            android:name=".ActivityTelaSocioMenu"
-            android:label="                               Sócios" />
         <activity
             android:name=".ActivityTelaMenu"
             android:label="                                 Menu" />

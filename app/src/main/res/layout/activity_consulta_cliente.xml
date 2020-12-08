@@ -9,57 +9,59 @@
 
     <Button
         android:id="@+id/buttonVoltarConsulCli"
-        android:layout_width="59dp"
+        android:layout_width="96dp"
         android:layout_height="57dp"
-        android:layout_marginStart="18dp"
-        android:layout_marginEnd="138dp"
-        android:layout_marginBottom="16dp"
+        android:layout_marginStart="35dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginBottom="59dp"
         android:background="@drawable/icone_voltar"
         android:padding="5dp"
         android:textSize="18sp"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonNovoCli"
+        app:layout_constraintBottom_toTopOf="@+id/listViewSocio"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewLogoConsulCli"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/_dynamic" />
+        app:layout_constraintTop_toTopOf="parent" />
 
     <Button
         android:id="@+id/buttonNovoCli"
-        android:layout_width="178dp"
-        android:layout_height="53dp"
-        android:layout_marginTop="8dp"
-        android:layout_marginEnd="18dp"
-        android:layout_marginBottom="17dp"
+        android:layout_width="126dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="13dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="61dp"
         android:layout_weight="1"
         android:background="@drawable/button_beauty_full"
         android:text="Novo Cliente ++"
-        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintBottom_toTopOf="@+id/listViewSocio"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonVoltarConsulCli"
-        app:layout_constraintTop_toBottomOf="@+id/_dynamic" />
+        app:layout_constraintStart_toEndOf="@+id/imageViewLogoConsulCli"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/imageViewLogoConsulCli"
-        android:layout_width="127dp"
-        android:layout_height="80dp"
+        android:layout_width="101dp"
+        android:layout_height="72dp"
         android:layout_marginStart="142dp"
         android:layout_marginTop="7dp"
         android:layout_marginEnd="142dp"
+        android:contentDescription="@string/todo"
         app:layout_constraintBottom_toTopOf="@+id/_dynamic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@drawable/ic_launcher"
-        android:contentDescription="@string/todo" />
+        app:srcCompat="@drawable/ic_launcher" />
 
     <ListView
-        android:id="@+id/listViewCliente"
+        android:id="@+id/listViewSocio"
         android:layout_width="403dp"
-        android:layout_height="430dp"
+        android:layout_height="466dp"
         android:layout_marginStart="5dp"
-        android:layout_marginTop="6dp"
+        android:layout_marginTop="53dp"
         android:layout_marginEnd="3dp"
-        android:layout_marginBottom="7dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonVoltarConsulCli"
+        android:layout_marginBottom="4dp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/imageViewLogoConsulCli" />
