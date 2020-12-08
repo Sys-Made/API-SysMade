@@ -59,11 +59,12 @@ public class DtoCliente {
 
     @Override
     public String toString() {
-        return  "nome='" + nome + '\'' +
-                ", cpf_cnpj='" + cpf_cnpj + '\'' +
-                ", telefone='" + telefone + '\'' +
-                ", endereco='" + endereco + '\'' +
-                ", email='" + email;
+        //Existe um erro onde telefone e endereço estao invertidos no banco, por tanto foi feita a inversao de variaveis
+        return  "Nome: '" + nome + '\'' +
+                ", CPF/CNPJ='" + cpf_cnpj + '\'' +
+                ", Telefone='" + telefone + '\'' +
+                ", E-mail='" + endereco + '\'' +
+                ", Endereço='" + email;
     }
 }
 
