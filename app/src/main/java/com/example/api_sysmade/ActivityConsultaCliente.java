@@ -24,9 +24,9 @@ public class ActivityConsultaCliente extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_consulta_cliente);
-        buttonVoltarConsulCli = findViewById(R.id.buttonVoltarConsulContrato);
-        buttonNovoCli = findViewById(R.id.buttonNovoContrato);
-        listViewCliente = findViewById(R.id.listViewContrato);
+        buttonVoltarConsulCli = findViewById(R.id.buttonVoltarConsulCli);
+        buttonNovoCli = findViewById(R.id.buttonNovoCli);
+        listViewCliente = findViewById(R.id.listViewCliente);
         DaoCliente daoCliente = new DaoCliente(getApplicationContext());
         voltarAoMenuCliente();
 
