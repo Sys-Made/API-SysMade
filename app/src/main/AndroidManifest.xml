@@ -15,24 +15,30 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
+        <activity android:name=".ActivityConsultaContrato"
+            android:label="Consultar contratos"/>
+        <activity android:name=".ActivityCadastraContrato"
+            android:label="Deseja cadastrar um novo contrato?"/>
+        <activity android:name=".ActivityTelaContratosMenu"
+            android:label="Menu-Contratos" />
         <activity
             android:name=".ActivityTelaSocioMenu"
-            android:label="                               Sócios"></activity>
+            android:label="Menu-Sócio" />
         <activity
             android:name=".ActivityConsultaSocio"
-            android:label="                     Consultar sócios" />
+            android:label="Consultar sócios" />
         <activity
             android:name=".ActivityConsultaCliente"
-            android:label="                     Consultar clientes" />
+            android:label="Consultar clientes" />
         <activity
             android:name=".ActivityCadastraCliente"
-            android:label="                 Cadastrar novo cliente?" />
+            android:label="Deseja cadastrar um novo cliente?" />
         <activity
             android:name=".ActivityTelaSobre"
-            android:label="                                 Sobre" />
+            android:label="Quem somos!" />
         <activity
             android:name=".ActivityCadastraSocio"
-            android:label="                   Cadastrar novo sócio?" />
+            android:label="Deseja cadastrar um novo sócio?" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
@@ -47,22 +53,22 @@
 
         <activity
             android:name=".ActivityMapa"
-            android:label="                       Onde estamos!" />
+            android:label="Onde estamos!" />
         <activity
             android:name=".ActivityTelaClienteMenu"
-            android:label="                       Menu de Clientes" />
+            android:label="Menu-Cliente" />
         <activity
             android:name=".ActivityTelaMenu"
-            android:label="                                 Menu" />
+            android:label="Menu Principal" />
         <activity
             android:name=".ActivityTelaLogin"
-            android:label="                                Login" />
+            android:label="Login" />
         <activity
             android:name=".ActivityTelaServicos"
-            android:label="                              Serviços" />
+            android:label="O que fazemos!" />
         <activity
             android:name=".ActivityTelaSplash"
-            android:label="                   SysMade versão 1.0">
+            android:label="SysMade versão 1.0">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

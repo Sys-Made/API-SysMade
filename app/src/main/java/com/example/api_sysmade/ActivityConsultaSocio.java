@@ -27,7 +27,7 @@ public class ActivityConsultaSocio extends AppCompatActivity {
         setContentView(R.layout.activity_consulta_socio);
         buttonVoltarConsulSocio = findViewById(R.id.buttonVoltarConsulSocio);
         buttonNovoSocio = findViewById(R.id.buttonNovoSocio);
-        listViewSocio = findViewById(R.id.listViewSocio);
+        listViewSocio = findViewById(R.id.listViewContrato);
         DaoSocio daoSocio = new DaoSocio(getApplicationContext());
         voltarAoMenuSocio();
 

@@ -41,7 +41,7 @@ public class DaoSocio extends SQLiteOpenHelper {
     }
 
 
-    public Long inserir(DtoSocio dtoSocio){
+    public Long inserirSocio(DtoSocio dtoSocio){
         ContentValues values = new ContentValues();
 
         values.put("SENHA", dtoSocio.getSenha());

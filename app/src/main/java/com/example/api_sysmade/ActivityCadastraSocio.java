@@ -31,17 +31,17 @@ public class ActivityCadastraSocio extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_cadastra_socio);
 
-        buttonCadastrarSocio = findViewById(R.id.buttonCadastrarSocio);
-        buttonCancelCadSocio = findViewById(R.id.buttonCancelCadSocio);
-        buttonVoltarCadSocio = findViewById(R.id.buttonVoltarCadSocio);
+        buttonCadastrarSocio = findViewById(R.id.buttonCadastrarContrato);
+        buttonCancelCadSocio = findViewById(R.id.buttonCancelCadContrato);
+        buttonVoltarCadSocio = findViewById(R.id.buttonVoltarCadContrato);
 
-        editTextSenhaSocio = findViewById(R.id.editTextSenhaSocio);
-        editTextNomeSocio = findViewById(R.id.editTextNomeSocio);
-        editTextCpfSocio = findViewById(R.id.editTextCpfSocio);
-        editTextCargoSocio = findViewById(R.id.editTextCargoSocio);
-        editTextEndSocio = findViewById(R.id.editTextEndSocio);
-        editTextTelSocio = findViewById(R.id.editTextTelSocio);
-        editTextEmailSocio = findViewById(R.id.editTextEmailSocio);
+        editTextSenhaSocio = findViewById(R.id.editTextCpfCliContrato);
+        editTextNomeSocio = findViewById(R.id.editTextCnpjEmpresa);
+        editTextCpfSocio = findViewById(R.id.editTextTelEmpresa);
+        editTextCargoSocio = findViewById(R.id.editTextTipoSistema);
+        editTextEndSocio = findViewById(R.id.editTextNomeDevResp);
+        editTextTelSocio = findViewById(R.id.editTextDataIniProjeto);
+        editTextEmailSocio = findViewById(R.id.editTextDataFinalProjeto);
         voltarAoMenuSocio();
 
         buttonCadastrarSocio.setOnClickListener(new View.OnClickListener() {
@@ -57,7 +57,7 @@ public class ActivityCadastraSocio extends AppCompatActivity {
                         editTextEmailSocio.getText().toString());
                 DaoSocio daoSocio = new DaoSocio(getApplicationContext());
                 try {
-                    if (daoSocio.inserir(dtoSocio) > 0) {
+                    if (daoSocio.inserirSocio(dtoSocio) > 0) {
                         Toast.makeText(ActivityCadastraSocio.this, "Inserido com sucesso!", Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception ex) {

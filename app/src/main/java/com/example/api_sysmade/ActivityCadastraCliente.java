@@ -51,7 +51,7 @@ public class ActivityCadastraCliente extends AppCompatActivity {
                         editTextEmailCli.getText().toString());
                 DaoCliente daoCliente = new DaoCliente(getApplicationContext());
                 try {
-                    if (daoCliente.inserir(dtoCliente) > 0) {
+                    if (daoCliente.inserirCliente(dtoCliente) > 0) {
                         Toast.makeText(ActivityCadastraCliente.this, "Inserido com sucesso!", Toast.LENGTH_SHORT).show();
                     }
                 } catch (Exception ex) {

@@ -5,64 +5,62 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@drawable/fundo"
-    tools:context=".ActivityTelaClienteMenu">
+    tools:context=".ActivityTelaContratosMenu">
 
     <Button
-        android:id="@+id/buttonChamaConsulCli"
-        android:layout_width="260dp"
-        android:layout_height="81dp"
-        android:layout_marginStart="75dp"
-        android:layout_marginTop="31dp"
-        android:layout_marginEnd="76dp"
-        android:layout_marginBottom="53dp"
-        android:layout_weight="1"
-        android:background="@drawable/button_beauty_full"
-        android:text="Consultar"
-        app:layout_constraintBottom_toTopOf="@+id/buttonVoltarCliMenu"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonChamaCadCli" />
-
-    <Button
-        android:id="@+id/buttonChamaCadCli"
-        android:layout_width="256dp"
-        android:layout_height="80dp"
-        android:layout_margin="10dp"
-        android:layout_marginStart="77dp"
-        android:layout_marginTop="66dp"
-        android:layout_marginEnd="145dp"
-        android:layout_weight="1"
-        android:background="@drawable/button_beauty_full"
-        android:text="Cadastrar"
-        app:layout_constraintBottom_toTopOf="@+id/buttonChamaConsulCli"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView" />
-
-    <Button
-        android:id="@+id/buttonVoltarCliMenu"
+        android:id="@+id/buttonVoltarContratoMenu"
         android:layout_width="67dp"
         android:layout_height="71dp"
         android:layout_marginStart="173dp"
-        android:layout_marginEnd="173dp"
-        android:layout_marginBottom="17dp"
+        android:layout_marginEnd="171dp"
+        android:layout_marginBottom="63dp"
         android:background="@drawable/icone_voltar"
         android:padding="5dp"
         android:textSize="18sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/buttonChamaConsulCli" />
+        app:layout_constraintTop_toBottomOf="@+id/buttonChamaConsulContrato" />
+
+    <Button
+        android:id="@+id/buttonChamaConsulContrato"
+        android:layout_width="260dp"
+        android:layout_height="81dp"
+        android:layout_marginStart="75dp"
+        android:layout_marginEnd="76dp"
+        android:layout_marginBottom="44dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_beauty_full"
+        android:text="Consultar"
+        app:layout_constraintBottom_toTopOf="@+id/buttonVoltarContratoMenu"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/buttonChamaCadContrato" />
+
+    <Button
+        android:id="@+id/buttonChamaCadContrato"
+        android:layout_width="256dp"
+        android:layout_height="80dp"
+        android:layout_marginStart="78dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="77dp"
+        android:layout_marginBottom="49dp"
+        android:layout_weight="1"
+        android:background="@drawable/button_beauty_full"
+        android:text="Cadastrar"
+        app:layout_constraintBottom_toTopOf="@+id/buttonChamaConsulContrato"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/imageViewContratoMenu" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/imageViewContratoMenu"
         android:layout_width="207dp"
         android:layout_height="171dp"
         android:layout_marginStart="102dp"
-        android:layout_marginTop="16dp"
         android:layout_marginEnd="102dp"
-        android:layout_marginBottom="41dp"
-        app:layout_constraintBottom_toTopOf="@+id/buttonChamaCadCli"
+        android:layout_marginBottom="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/buttonChamaCadContrato"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"

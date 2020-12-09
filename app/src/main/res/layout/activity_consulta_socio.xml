@@ -18,8 +18,8 @@
         android:background="@drawable/icone_voltar"
         android:padding="5dp"
         android:textSize="18sp"
-        app:layout_constraintBottom_toTopOf="@+id/listViewSocio"
-        app:layout_constraintEnd_toStartOf="@+id/imageViewLogoConsulCli"
+        app:layout_constraintBottom_toTopOf="@+id/listViewContrato"
+        app:layout_constraintEnd_toStartOf="@+id/imageViewLogoConsulContrato"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -34,9 +34,9 @@
         android:layout_weight="1"
         android:background="@drawable/button_beauty_full"
         android:text="Novo Socio ++"
-        app:layout_constraintBottom_toTopOf="@+id/listViewSocio"
+        app:layout_constraintBottom_toTopOf="@+id/listViewContrato"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/imageViewLogoConsulCli"
+        app:layout_constraintStart_toEndOf="@+id/imageViewLogoConsulContrato"
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
@@ -54,7 +54,7 @@
         app:srcCompat="@drawable/ic_launcher" />
 
     <ListView
-        android:id="@+id/listViewSocio"
+        android:id="@+id/listViewContrato"
         android:layout_width="403dp"
         android:layout_height="466dp"
         android:layout_marginStart="5dp"
@@ -64,5 +64,5 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageViewLogoConsulCli" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewLogoConsulContrato" />
 </androidx.constraintlayout.widget.ConstraintLayout>

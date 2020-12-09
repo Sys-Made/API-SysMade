@@ -47,7 +47,7 @@ public class DaoCliente extends SQLiteOpenHelper {
     }
 
 
-    public Long inserir(DtoCliente dtoCliente){
+    public Long inserirCliente(DtoCliente dtoCliente){
         ContentValues values = new ContentValues();
 
         values.put("NOME", dtoCliente.getNome());

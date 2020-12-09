@@ -8,7 +8,7 @@
     tools:context=".ActivityCadastraSocio">
 
     <EditText
-        android:id="@+id/editTextEmailSocio"
+        android:id="@+id/editTextDataFinalProjeto"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="18dp"
@@ -20,13 +20,13 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/buttonVoltarCadSocio"
+        app:layout_constraintBottom_toTopOf="@+id/buttonVoltarCadContrato"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTelSocio" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDataIniProjeto" />
 
     <EditText
-        android:id="@+id/editTextTelSocio"
+        android:id="@+id/editTextDataIniProjeto"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="18dp"
@@ -38,13 +38,13 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEmailSocio"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDataFinalProjeto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEndSocio" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextNomeDevResp" />
 
     <EditText
-        android:id="@+id/editTextEndSocio"
+        android:id="@+id/editTextNomeDevResp"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="18dp"
@@ -56,13 +56,13 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTelSocio"
+        app:layout_constraintBottom_toTopOf="@+id/editTextDataIniProjeto"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCargoSocio" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTipoSistema" />
 
     <EditText
-        android:id="@+id/editTextSenhaSocio"
+        android:id="@+id/editTextCpfCliContrato"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="21dp"
@@ -75,13 +75,13 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/editTextNomeSocio"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCnpjEmpresa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+        app:layout_constraintTop_toBottomOf="@+id/imageViewCadContrato" />
 
     <EditText
-        android:id="@+id/editTextNomeSocio"
+        android:id="@+id/editTextCnpjEmpresa"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="18dp"
@@ -93,13 +93,13 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCpfSocio"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTelEmpresa"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextSenhaSocio" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCpfCliContrato" />
 
     <EditText
-        android:id="@+id/editTextCpfSocio"
+        android:id="@+id/editTextTelEmpresa"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="18dp"
@@ -111,13 +111,13 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCargoSocio"
+        app:layout_constraintBottom_toTopOf="@+id/editTextTipoSistema"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextNomeSocio" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCnpjEmpresa" />
 
     <EditText
-        android:id="@+id/editTextCargoSocio"
+        android:id="@+id/editTextTipoSistema"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="19dp"
@@ -129,13 +129,13 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/editTextEndSocio"
+        app:layout_constraintBottom_toTopOf="@+id/editTextNomeDevResp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCpfSocio" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextTelEmpresa" />
 
     <Button
-        android:id="@+id/buttonCancelCadSocio"
+        android:id="@+id/buttonCancelCadContrato"
         android:layout_width="112dp"
         android:layout_height="50dp"
         android:layout_marginStart="28dp"
@@ -147,11 +147,11 @@
         android:text="Cancelar"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonVoltarCadSocio"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailSocio" />
+        app:layout_constraintStart_toEndOf="@+id/buttonVoltarCadContrato"
+        app:layout_constraintTop_toBottomOf="@+id/editTextDataFinalProjeto" />
 
     <Button
-        android:id="@+id/buttonCadastrarSocio"
+        android:id="@+id/buttonCadastrarContrato"
         android:layout_width="115dp"
         android:layout_height="49dp"
         android:layout_marginStart="31dp"
@@ -162,12 +162,12 @@
         android:background="@drawable/button_beauty_full"
         android:text="Cadastrar"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toStartOf="@+id/buttonVoltarCadSocio"
+        app:layout_constraintEnd_toStartOf="@+id/buttonVoltarCadContrato"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextEmailSocio" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextDataFinalProjeto" />
 
     <ImageView
-        android:id="@+id/imageView4"
+        android:id="@+id/imageViewCadContrato"
         android:layout_width="141dp"
         android:layout_height="106dp"
         android:layout_marginStart="135dp"
@@ -180,7 +180,7 @@
         app:srcCompat="@drawable/ic_launcher" />
 
     <Button
-        android:id="@+id/buttonVoltarCadSocio"
+        android:id="@+id/buttonVoltarCadContrato"
         android:layout_width="60dp"
         android:layout_height="55dp"
         android:layout_marginStart="162dp"
