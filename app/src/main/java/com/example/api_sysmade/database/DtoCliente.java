@@ -63,8 +63,8 @@ public class DtoCliente {
         return  "Nome: '" + nome + '\'' +
                 ", CPF/CNPJ='" + cpf_cnpj + '\'' +
                 ", Telefone='" + telefone + '\'' +
-                ", E-mail='" + endereco + '\'' +
-                ", Endereço='" + email;
+                ", Endereço='" + endereco + '\'' +
+                ", E-mail='" + email;
     }
 }
 
