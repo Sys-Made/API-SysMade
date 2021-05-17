@@ -1,17 +1,13 @@
 package com.example.api_sysmade;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import com.example.api_sysmade.database.DaoCliente;
 import com.example.api_sysmade.database.DtoCliente;
-
 import java.util.ArrayList;
 
 public class ActivityConsultaCliente extends AppCompatActivity {
@@ -31,7 +27,7 @@ public class ActivityConsultaCliente extends AppCompatActivity {
         voltarAoMenuCliente();
 
         arrayListCliente = daoCliente.consultarTodosCli();
-        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(),android.R.layout.simple_list_item_1,arrayListCliente);
+        ArrayAdapter<DtoCliente> adapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_list_item_1,arrayListCliente);
 
         listViewCliente.setAdapter(adapter);
 
@@ -41,22 +37,16 @@ public class ActivityConsultaCliente extends AppCompatActivity {
     }
 
         private void cadastrarNovoCliente(){
-            buttonNovoCli.setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent novoCliente = new Intent(getApplicationContext(),ActivityCadastraCliente.class);
-                    startActivity(novoCliente);
-                }
+            buttonNovoCli.setOnClickListener(v ->  {
+                Intent novoCliente = new Intent(getApplicationContext(),ActivityCadastraCliente.class);
+                startActivity(novoCliente);
             });
         }
 
     public void voltarAoMenuCliente(){
-        buttonVoltarConsulCli.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaClienteMenu = new Intent(getApplicationContext(), ActivityTelaClienteMenu.class);
-                startActivity(telaClienteMenu);
-            }
+        buttonVoltarConsulCli.setOnClickListener(v -> {
+            Intent telaClienteMenu = new Intent(getApplicationContext(), ActivityTelaClienteMenu.class);
+            startActivity(telaClienteMenu);
         });
 
     }

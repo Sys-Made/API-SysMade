@@ -18,12 +18,9 @@ public class ActivityTelaSobre extends AppCompatActivity {
     }
 
     public void voltarAoMenu(){
-        buttonVoltarSobre.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaMenu = new Intent(getApplicationContext(), ActivityTelaMenu.class);
-                startActivity(telaMenu);
-            }
+        buttonVoltarSobre.setOnClickListener(v -> {
+            Intent telaMenu = new Intent(getApplicationContext(), ActivityTelaMenu.class);
+            startActivity(telaMenu);
         });
     }
 }

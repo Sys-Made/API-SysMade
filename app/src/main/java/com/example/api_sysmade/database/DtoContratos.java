@@ -9,7 +9,7 @@ public class DtoContratos {
     }
 
     public DtoContratos(String nome, String cpf, String email, String empresa, String cnpj, String tel_com, String tipo_sys,
-                        String dev_resp, String data_ini, String data_fim) {
+      String dev_resp, String data_ini, String data_fim) {
         this.nome = nome;
         this.cpf = cpf;
         this.email = email;

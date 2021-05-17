@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class ActivityTelaSocioMenu extends AppCompatActivity {
@@ -24,34 +23,25 @@ public class ActivityTelaSocioMenu extends AppCompatActivity {
     }
 
     public void voltarAoMenu2(){
-        buttonVoltarSocioMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaMenu = new Intent(getApplicationContext(), ActivityTelaMenu.class);
-                startActivity(telaMenu);
-            }
+        buttonVoltarSocioMenu.setOnClickListener(v -> {
+            Intent telaMenu = new Intent(getApplicationContext(), ActivityTelaMenu.class);
+            startActivity(telaMenu);
         });
     }
 
     //Metodo que direciona o usuario para a tela de cadastro de sócios
     public void abrirCadSocio(){
-        buttonChamaCadSocio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaCadSocio = new Intent(getApplicationContext(), ActivityCadastraSocio.class);
-                startActivity(telaCadSocio);
-            }
+        buttonChamaCadSocio.setOnClickListener(v -> {
+            Intent telaCadSocio = new Intent(getApplicationContext(), ActivityCadastraSocio.class);
+            startActivity(telaCadSocio);
         });
     }
 
     //Metodo que direciona o usuario para a tela de consultas de sócios
     public void abrirConsulSocio(){
-        buttonChamaConsulSocio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaConsulSocio = new Intent(getApplicationContext(), ActivityConsultaSocio.class);
-                startActivity(telaConsulSocio);
-            }
+        buttonChamaConsulSocio.setOnClickListener(v -> {
+            Intent telaConsulSocio = new Intent(getApplicationContext(), ActivityConsultaSocio.class);
+            startActivity(telaConsulSocio);
         });
     }
 }

@@ -1,19 +1,14 @@
 package com.example.api_sysmade;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import com.example.api_sysmade.database.DaoSocio;
 import com.example.api_sysmade.database.DtoSocio;
-
 import java.util.ArrayList;
-
 
 public class ActivityConsultaSocio extends AppCompatActivity {
     Button buttonVoltarConsulSocio;
@@ -32,7 +27,7 @@ public class ActivityConsultaSocio extends AppCompatActivity {
         voltarAoMenuSocio();
 
         arrayListSocio = daoSocio.consultarTodosSocio();
-        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(),android.R.layout.simple_list_item_1,arrayListSocio);
+        ArrayAdapter<DtoSocio> adapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_list_item_1,arrayListSocio);
 
         listViewSocio.setAdapter(adapter);
 
@@ -42,22 +37,16 @@ public class ActivityConsultaSocio extends AppCompatActivity {
     }
 
     private void cadastrarNovoSocio(){
-        buttonNovoSocio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent novoSocio = new Intent(getApplicationContext(),ActivityCadastraSocio.class);
-                startActivity(novoSocio);
-            }
+        buttonNovoSocio.setOnClickListener(v -> {
+            Intent novoSocio = new Intent(getApplicationContext(),ActivityCadastraSocio.class);
+            startActivity(novoSocio);
         });
     }
 
     public void voltarAoMenuSocio(){
-        buttonVoltarConsulSocio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaSocioMenu = new Intent(getApplicationContext(), ActivityTelaSocioMenu.class);
-                startActivity(telaSocioMenu);
-            }
+        buttonVoltarConsulSocio.setOnClickListener(v -> {
+            Intent telaSocioMenu = new Intent(getApplicationContext(), ActivityTelaSocioMenu.class);
+            startActivity(telaSocioMenu);
         });
 
     }

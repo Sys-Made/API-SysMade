@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -32,23 +31,17 @@ public class ActivityTelaLogin extends AppCompatActivity {
 
 
 
-     buttonEntrar.setOnClickListener(new View.OnClickListener() {
-         @Override
-         public void onClick(View view) {
-            String usuario = txtUsuario.getText().toString();
-            String senha =  txtSenha.getText().toString();
-            logar(usuario,senha);
+     buttonEntrar.setOnClickListener(view -> {
+        String usuario = txtUsuario.getText().toString();
+        String senha =  txtSenha.getText().toString();
+        logar(usuario,senha);
 
-        }
     });
-        buttonCancelar.setOnClickListener(new View.OnClickListener() {
-        @Override
-        public void onClick(View view) {
+        buttonCancelar.setOnClickListener(view -> {
             // Limpar os campos de texto.
             txtUsuario.setText("");
             txtSenha.setText("");
-        }
-    });
+        });
 
 }
     private  void logar(String usuario, String senha){

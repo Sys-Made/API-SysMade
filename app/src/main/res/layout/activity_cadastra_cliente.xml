@@ -23,7 +23,7 @@
         app:layout_constraintTop_toBottomOf="@+id/buttonCancelCadCli" />
 
     <EditText
-        android:id="@+id/editTextCpf_Cnpj"
+        android:id="@+id/editTextCpfCnpjCli"
         android:layout_width="375dp"
         android:layout_height="47dp"
         android:layout_marginStart="16dp"
@@ -52,10 +52,10 @@
         android:inputType="textPersonName"
         android:padding="15dp"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/editTextCpf_Cnpj"
+        app:layout_constraintBottom_toTopOf="@+id/editTextCpfCnpjCli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+        app:layout_constraintTop_toBottomOf="@+id/logoSysCadCli" />
 
     <EditText
         android:id="@+id/editTextEmailCli"
@@ -109,7 +109,7 @@
         app:layout_constraintBottom_toTopOf="@+id/editTextEndCli"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextCpf_Cnpj" />
+        app:layout_constraintTop_toBottomOf="@+id/editTextCpfCnpjCli" />
 
     <Button
         android:id="@+id/buttonCancelCadCli"
@@ -124,11 +124,11 @@
         android:text="Cancelar"
         app:layout_constraintBottom_toTopOf="@+id/buttonVoltarCadCli"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/buttonCadastrarCliente"
+        app:layout_constraintStart_toEndOf="@+id/buttonCadCli"
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailCli" />
 
     <Button
-        android:id="@+id/buttonCadastrarCliente"
+        android:id="@+id/buttonCadCli"
         android:layout_width="162dp"
         android:layout_height="41dp"
         android:layout_marginStart="35dp"
@@ -144,7 +144,7 @@
         app:layout_constraintTop_toBottomOf="@+id/editTextEmailCli" />
 
     <ImageView
-        android:id="@+id/imageView2"
+        android:id="@+id/logoSysCadCli"
         android:layout_width="141dp"
         android:layout_height="106dp"
         android:layout_marginStart="135dp"

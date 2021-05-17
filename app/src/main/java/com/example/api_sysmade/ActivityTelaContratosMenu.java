@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class ActivityTelaContratosMenu extends AppCompatActivity {
@@ -24,34 +23,25 @@ public class ActivityTelaContratosMenu extends AppCompatActivity {
     }
 
     public void voltarAoMenu3(){
-        buttonVoltarContratoMenu.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaMenu = new Intent(getApplicationContext(), ActivityTelaMenu.class);
-                startActivity(telaMenu);
-            }
+        buttonVoltarContratoMenu.setOnClickListener(v -> {
+            Intent telaMenu = new Intent(getApplicationContext(), ActivityTelaMenu.class);
+            startActivity(telaMenu);
         });
     }
 
     //Metodo que direciona o usuario para a tela de cadastro de contratos
     public void abrirCadContrato(){
-        buttonChamaCadContrato.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaCadContrato = new Intent(getApplicationContext(), ActivityCadastraContrato.class);
-                startActivity(telaCadContrato);
-            }
+        buttonChamaCadContrato.setOnClickListener(v -> {
+            Intent telaCadContrato = new Intent(getApplicationContext(), ActivityCadastraContrato.class);
+            startActivity(telaCadContrato);
         });
     }
 
     //Metodo que direciona o usuario para a tela de consultas de contratos
     public void abrirConsulContrato(){
-        buttonChamaConsulContrato.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaConsulContrato = new Intent(getApplicationContext(), ActivityConsultaContrato.class);
-                startActivity(telaConsulContrato);
-            }
+        buttonChamaConsulContrato.setOnClickListener(v -> {
+            Intent telaConsulContrato = new Intent(getApplicationContext(), ActivityConsultaContrato.class);
+            startActivity(telaConsulContrato);
         });
     }
 }

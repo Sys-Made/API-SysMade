@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class ActivityTelaServicos extends AppCompatActivity {
@@ -18,12 +17,9 @@ public class ActivityTelaServicos extends AppCompatActivity {
     }
 
     private void VoltarMenu(){
-        buttonVoltarServicos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent menu = new Intent(getApplicationContext(), ActivityTelaMenu.class);
-                startActivity(menu);
-            }
+        buttonVoltarServicos.setOnClickListener(v -> {
+            Intent menu = new Intent(getApplicationContext(), ActivityTelaMenu.class);
+            startActivity(menu);
         });
     }
 }

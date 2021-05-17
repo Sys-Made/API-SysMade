@@ -9,12 +9,11 @@ import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
-import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 
-public class ActivityMapa extends FragmentActivity implements OnMapReadyCallback {
+import static com.google.android.gms.maps.GoogleMap.*;
 
-    private GoogleMap mMap;
+public class ActivityMapa extends FragmentActivity implements OnMapReadyCallback {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,6 +22,7 @@ public class ActivityMapa extends FragmentActivity implements OnMapReadyCallback
         // Obtain the SupportMapFragment and get notified when the map is ready to be used.
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
+        assert mapFragment != null;
         mapFragment.getMapAsync(this);
     }
 
@@ -37,15 +37,14 @@ public class ActivityMapa extends FragmentActivity implements OnMapReadyCallback
      */
     @Override
     public void onMapReady(GoogleMap googleMap) {
-        mMap = googleMap;
-        mMap.setMapType(googleMap.MAP_TYPE_NORMAL);
+        googleMap.setMapType(MAP_TYPE_NORMAL);
 
         // chamando a localização da SysMade no mapa usando dados de geolocalização baseados em latitude e longitude
         LatLng sysmade = new LatLng(-23.52077496067636, -46.727941457263064);
 
         // Adicionando um marcador em SysMade e movendo a câmera
-        mMap.addMarker(new MarkerOptions().position(sysmade).title("SysMade"));
-        mMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sysmade, 18f));
+        googleMap.addMarker(new MarkerOptions().position(sysmade).title("SysMade"));
+        googleMap.moveCamera(CameraUpdateFactory.newLatLngZoom(sysmade, 18f));
 
 
 

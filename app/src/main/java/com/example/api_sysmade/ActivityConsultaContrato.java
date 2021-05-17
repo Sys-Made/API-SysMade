@@ -1,19 +1,14 @@
 package com.example.api_sysmade;
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
-
 import com.example.api_sysmade.database.DaoContratos;
 import com.example.api_sysmade.database.DtoContratos;
-
 import java.util.ArrayList;
-
 
 public class ActivityConsultaContrato extends AppCompatActivity {
     Button buttonVoltarConsulContrato;
@@ -32,7 +27,7 @@ public class ActivityConsultaContrato extends AppCompatActivity {
         voltarAoMenuContrato();
 
         arrayListContrato = daoContratos.consultarTodosContratos();
-        ArrayAdapter adapter = new ArrayAdapter(getApplicationContext(),android.R.layout.simple_list_item_1,arrayListContrato);
+        ArrayAdapter<DtoContratos> adapter = new ArrayAdapter<>(getApplicationContext(),android.R.layout.simple_list_item_1,arrayListContrato);
 
         listViewContrato.setAdapter(adapter);
 
@@ -42,22 +37,16 @@ public class ActivityConsultaContrato extends AppCompatActivity {
     }
 
     private void cadastrarNovoContrato(){
-        buttonNovoContrato.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent novoContrato = new Intent(getApplicationContext(),ActivityCadastraContrato.class);
-                startActivity(novoContrato);
-            }
+        buttonNovoContrato.setOnClickListener(v -> {
+            Intent novoContrato = new Intent(getApplicationContext(),ActivityCadastraContrato.class);
+            startActivity(novoContrato);
         });
     }
 
     public void voltarAoMenuContrato(){
-        buttonVoltarConsulContrato.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaContratoMenu = new Intent(getApplicationContext(), ActivityTelaContratosMenu.class);
-                startActivity(telaContratoMenu);
-            }
+        buttonVoltarConsulContrato.setOnClickListener(v -> {
+            Intent telaContratoMenu = new Intent(getApplicationContext(), ActivityTelaContratosMenu.class);
+            startActivity(telaContratoMenu);
         });
 
     }

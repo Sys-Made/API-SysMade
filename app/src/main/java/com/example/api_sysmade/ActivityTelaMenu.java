@@ -4,7 +4,6 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.widget.Button;
 
 public class ActivityTelaMenu extends AppCompatActivity {
@@ -38,78 +37,57 @@ public class ActivityTelaMenu extends AppCompatActivity {
 
     //Metodo que faz retornar a tela de login
     public void voltarAoLogin(){
-        buttonSair.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaLogin = new Intent(getApplicationContext(),ActivityTelaLogin.class);
-                startActivity(telaLogin);
-            }
+        buttonSair.setOnClickListener(v -> {
+            Intent telaLogin = new Intent(getApplicationContext(),ActivityTelaLogin.class);
+            startActivity(telaLogin);
         });
     }
 
 
     //Metodo que direciona o usuario para a tela de MenuSocio
     public void abrirSocioMenu(){
-        buttonSocio.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaSocioMenu = new Intent(getApplicationContext(),ActivityTelaSocioMenu.class);
-                startActivity(telaSocioMenu);
-            }
+        buttonSocio.setOnClickListener(v -> {
+            Intent telaSocioMenu = new Intent(getApplicationContext(),ActivityTelaSocioMenu.class);
+            startActivity(telaSocioMenu);
         });
     }
 
 
     //Metodo que direciona o usuario para a tela de MenuCliente
     public void abrirClienteMenu(){
-        buttonCliente.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaClienteMenu = new Intent(getApplicationContext(),ActivityTelaClienteMenu.class);
-                startActivity(telaClienteMenu);
-            }
+        buttonCliente.setOnClickListener(v -> {
+            Intent telaClienteMenu = new Intent(getApplicationContext(),ActivityTelaClienteMenu.class);
+            startActivity(telaClienteMenu);
         });
     }
 
     //Metodo que direciona o usuario para a tela de Mapa
     public void abrirMapa(){
-        buttonMapa.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaMapa = new Intent(getApplicationContext(), ActivityMapa.class);
-                startActivity(telaMapa);
-            }
+        buttonMapa.setOnClickListener(v -> {
+            Intent telaMapa = new Intent(getApplicationContext(), ActivityMapa.class);
+            startActivity(telaMapa);
         });
     }
 
     //Metodo que direciona o usuario para a tela Sobre
     public void abrirSobre(){
-        buttonSobre.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent telaSobre = new Intent(getApplicationContext(), ActivityTelaSobre.class);
-                startActivity(telaSobre);
-            }
+        buttonSobre.setOnClickListener(v -> {
+            Intent telaSobre = new Intent(getApplicationContext(), ActivityTelaSobre.class);
+            startActivity(telaSobre);
         });
     }
 
     private void abrirServicos(){
-        buttonServicos.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent servicos = new Intent(getApplicationContext(), ActivityTelaServicos.class);
-                startActivity(servicos);
-            }
+        buttonServicos.setOnClickListener(v -> {
+            Intent servicos = new Intent(getApplicationContext(), ActivityTelaServicos.class);
+            startActivity(servicos);
         });
     }
 
     private void abrirContratos(){
-        buttonContrato.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent contratos = new Intent(getApplicationContext(), ActivityTelaContratosMenu.class);
-                startActivity(contratos);
-            }
+        buttonContrato.setOnClickListener(v -> {
+            Intent contratos = new Intent(getApplicationContext(), ActivityTelaContratosMenu.class);
+            startActivity(contratos);
         });
     }
 }
